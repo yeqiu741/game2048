@@ -1,0 +1,9 @@
+export const RESTART = 'RESTART';
+export const MOVEUP = 'MOVEUP';
+export const MOVEDOWN = 'MOVEDOWN';
+export const MOVELEFT = 'MOVELEFT';
+export const MOVERIGHT = 'MOVERIGHT';
+export const ADDLASTSCORE = 'ADDLASTSCORE';
+export const ADDBESTSCORE = 'ADDBESTSCORE';
+export const INITLASTSCORE = 'INITLASTSCORE';
+export const ONERANDNUMBER = 'ONERANDNUMBER';

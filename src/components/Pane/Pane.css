@@ -1,0 +1,163 @@
+.gameContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 446px;
+    height: 446px;
+    border:1px solid gray;
+    margin:0 auto;
+    background-color: gray;
+}
+.gameContainer div{
+    width: 100px;
+    height: 100px;
+    border:1px solid yellow;
+    border-radius: 20px;
+    margin:5px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+}
+@media screen and (max-width:415px){
+    .gameContainer{
+        width: 375px;
+        height: 375px;
+    }
+    .gameContainer div{
+        width: 82px;
+        height: 82px;
+    }
+}
+
+@keyframes myfirst{
+    from {transform: scale(.6)};
+    to {transform: scale(1)};
+}
+.animation2{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation4{
+    background-color: rgb(255,182,193);
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation8{
+    background-color: #c93756;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation16{
+    background-color: #ff4c00;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation32{
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation64{
+    background-color: #ff7500;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation128{
+    background-color: #425066;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation128{
+    background-color: #8d4bbb ;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation128{
+    background-color: #2edfa3;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation128{
+    background-color: #2add9c;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation256{
+    background-color: #00e079;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation512{
+    background-color: #a78e44;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation1024{
+    background-color: #ae7000;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+.animation2048{
+    background-color: #ff2d51;
+    width: 100px;
+    height: 100px;
+    animation: myfirst .5s;
+    -moz-animation: myfirst .5s;
+    -webkit-animation: myfirst .5s;
+    -o-animation: myfirst .5s;
+}
+

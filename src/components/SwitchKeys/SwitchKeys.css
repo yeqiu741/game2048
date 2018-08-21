@@ -1,0 +1,35 @@
+.switchKeys{
+    width: 142px;
+    margin:10px auto;
+}
+.caret-left{
+    float: left;
+    width: 40px;
+    height: 30px;
+}
+.caret-right{
+    float: right;
+    width: 40px;
+    height: 30px;
+}
+.caret-up{
+    margin-left: 50px;
+    width: 40px;
+    height: 30px;
+}
+.caret-down{
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 40px;
+    height: 30px;
+}
+
+.switchKeys img{
+    width: 25px;
+    height: 25px;
+}
+@media screen and (min-width: 415px) {
+    .switchKeys{
+        display: none;
+    }
+}
