@@ -72,7 +72,7 @@
     -o-animation: myfirst .5s;
 }
 .animation32{
-    background-color: red;
+    background-color: blue;
     width: 100px;
     height: 100px;
     animation: myfirst .5s;
@@ -98,7 +98,7 @@
     -webkit-animation: myfirst .5s;
     -o-animation: myfirst .5s;
 }
-.animation128{
+.animation256{
     background-color: #8d4bbb ;
     width: 100px;
     height: 100px;
@@ -107,7 +107,7 @@
     -webkit-animation: myfirst .5s;
     -o-animation: myfirst .5s;
 }
-.animation128{
+.animation512{
     background-color: #2edfa3;
     width: 100px;
     height: 100px;
@@ -116,33 +116,7 @@
     -webkit-animation: myfirst .5s;
     -o-animation: myfirst .5s;
 }
-.animation128{
-    background-color: #2add9c;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
-.animation256{
-    background-color: #00e079;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
-.animation512{
-    background-color: #a78e44;
-    width: 100px;
-    height: 100px;
-    animation: myfirst .5s;
-    -moz-animation: myfirst .5s;
-    -webkit-animation: myfirst .5s;
-    -o-animation: myfirst .5s;
-}
+
 .animation1024{
     background-color: #ae7000;
     width: 100px;
