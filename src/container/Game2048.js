@@ -286,13 +286,8 @@ class Game2048 extends Component {
       );
     }
 }
-function mapStateToProps(state) {
-  const { restart, score, icon } = state;
-  return { restart, score, icon };
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    actions: bindActionCreators(Actioncreators, dispatch)
-  };
-}
+const mapStateToProps = ({ restart, score, icon }) => ({ restart, score, icon });
+const mapDispatchToProps = dispatch => ({
+  actions: bindActionCreators(Actioncreators, dispatch)
+});
 export default connect(mapStateToProps, mapDispatchToProps)(Game2048);

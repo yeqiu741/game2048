@@ -1,14 +1,13 @@
 import * as actionType from '../const/actionType';
 
 
-
 const init_state = {
   number: [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0],
     [0, 0, 0, 0]
-  ],
+  ]
 
 };
 /* eslint-disable */
