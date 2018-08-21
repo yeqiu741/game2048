@@ -7,6 +7,6 @@
 }
 @media screen and (max-width:415px){
   .game2048{
-    width:320px;
+    width:100%;
   }
 }

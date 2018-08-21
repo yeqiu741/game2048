@@ -11,12 +11,8 @@
 }
 .hint{
     margin:0 auto;
-    flex-shrink: 0;
 }
 .pcRule{
-    font-size: 10px;
-}
-.phoneRule{
     font-size: 10px;
 }
 .scoreBoard{
@@ -24,7 +20,6 @@
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: wrap;
-    margin:0 auto;
 }
 .scoreBoard button{
     width: 60%;
@@ -67,15 +62,20 @@
 
 @media screen and (max-width:415px){
     .tip{
-        width: 375px;
+        width: 325px;
+    }
+    .gameName{
+        font-size: 50px;
+        font-weight: bold;
     }
     .scoreBoard button{
         width: 50%;
+        font-size: 18px;
     }
     .scoreBoard div{
         width: 75px;
     }
-    .phoneRule{
-        width: 150px;
+    .pcRule{
+        width: 143px;
     }
 }

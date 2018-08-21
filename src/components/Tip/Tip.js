@@ -40,8 +40,7 @@ export default class Tip extends Component {
         <div className="tip">
           <div className="hint">
             <div className="gameName">2048</div>
-            <div className="pcRule">Keypressing <mark>W S A D</mark> on PC.</div>
-            <div className="phoneRule">Touch moving on Phone!Join it & have fun!</div>
+            <div className="pcRule">Keypressing W(上) S（下） A（左） D（右）</div>
           </div>
           <div className="scoreBoard">
             <div>
@@ -50,7 +49,7 @@ export default class Tip extends Component {
             <div>
                 历史最高分<br />{score.bestScore}
             </div>
-            <button onClick={this.handleRestartClick}>reStart</button>
+            <button onClick={this.handleRestartClick}>重新开始</button>
           </div>
         </div>
       );
