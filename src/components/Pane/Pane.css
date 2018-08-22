@@ -1,34 +1,46 @@
 .gameContainer{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     width: 446px;
     height: 446px;
     border:1px solid gray;
     margin:0 auto;
     background-color: gray;
-    justify-content: space-around
 }
-.gameContainer div{
-    width: 100px;
-    height: 100px;
+.gameContainer_box{
+    margin:2%;
+    width: 96%;
+    height: 96%;
+}
+.rowBox{
+
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: flex-start;
+}
+.rowBox div{
+    margin:auto;
+    width: 21%;
+    height: 86%;
     border:1px solid yellow;
     border-radius: 20px;
-    margin:5px;
     font-size: 36px;
     font-weight: bold;
     text-align: center;
     line-height: 100px;
 }
+
 @media screen and (max-width:415px){
     .gameContainer{
         width: 100%;
         height: 375px;
     }
-    .gameContainer div{
-        width: 83px;
-        height: 83px;
-        line-height: 70px;
+    .gameContainer_box{
+        margin:1%;
+        width: 98%;
+        height: 98%;
+    }
+    .rowBox div{
+        line-height: 200%;
     }
 }
 

@@ -25,7 +25,7 @@
     "no-bitwise": ["off", "never"],
     "no-mixed-operators": ["off", "never"],
     "no-underscore-dangle": ["off", "never"],
-    "max-len": ["error", 200],
+    "max-len": ["error", 250],
     "no-unused-expressions": ["error", {
       "allowShortCircuit": true
     }],

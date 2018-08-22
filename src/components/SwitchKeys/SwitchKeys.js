@@ -3,16 +3,20 @@ import './SwitchKeys.css';
 
 export default class SwitchKeys extends React.Component {
   handleUpKyesClick = () => {
-    this.props.up();
+    const { actions } = this.props;
+    this.props.up(actions);
   }
   handleDownKyesClick = () => {
-    this.props.down();
+    const { actions } = this.props;
+    this.props.down(actions);
   }
   handleLeftKyesClick = () => {
-    this.props.left();
+    const { actions } = this.props;
+    this.props.left(actions);
   }
   handleRightKyesClick = () => {
-    this.props.right();
+    const { actions } = this.props;
+    this.props.right(actions);
   }
   render() {
     const { icon } = this.props;

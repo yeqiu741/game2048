@@ -8,66 +8,56 @@ import SwitchKeys from '../components/SwitchKeys/SwitchKeys';
 
 
 class Game2048 extends Component {
-  componentWillMount() {
+  constructor(props) {
+    super(props);
     this.initialization();
   }
   // 键盘字符 W S A D 的 ASCII 码分别对应为 87 83 65 68；
   /* eslint-disable no-param-reassign */
   componentDidMount() {
     document.addEventListener('keydown', e => {
+      const { actions } = this.props;
       switch (e.keyCode) {
         case 65:
-          this.left();
+        case 37:
+          this.left(actions);
           break;
         case 87:
-          this.up();
+        case 38:
+          this.up(actions);
           break;
         case 68:
-          this.right();
+        case 39:
+          this.right(actions);
           break;
         case 83:
-          this.down();
-          break;
-        case 37:
-          this.left();
-          break;
-        case 39:
-          this.right();
-          break;
-        case 38:
-          this.up();
-          break;
         case 40:
-          this.down();
+          this.down(actions);
           break;
         default:
-          console.log('not right');
+          console.log('请按W A S D,或者上下左右健，没事别他妈瞎按！');
       }
     });
   }
-  left = () => {
-    const { actions } = this.props;
+  left = actions => {
     actions.addLastScore(0);
     actions.moveLeft(this.handlePressLeftKey());
     this.JudgeScore();
     this.randomNumberInsertion();
   }
-  right = () => {
-    const { actions } = this.props;
+  right = actions => {
     actions.addLastScore(0);
     actions.moveRight(this.handlePressRightKey());
     this.JudgeScore();
     this.randomNumberInsertion();
   }
-  up = () => {
-    const { actions } = this.props;
+  up = actions => {
     actions.addLastScore(0);
     actions.moveUp(this.handlePressUpKey());
     this.JudgeScore();
     this.randomNumberInsertion();
   }
-  down = () => {
-    const { actions } = this.props;
+  down = actions => {
     actions.addLastScore(0);
     actions.moveDown(this.handlePressDownKey());
     this.JudgeScore();
@@ -267,7 +257,9 @@ class Game2048 extends Component {
       }
     };
     render() {
-      const { restart, score, icon } = this.props;
+      const {
+        restart, score, icon, actions
+      } = this.props;
       return (
         <div className="game2048">
           <Tip
@@ -281,13 +273,12 @@ class Game2048 extends Component {
             right={this.right}
             down={this.down}
             icon={icon}
+            actions={actions}
           />
         </div>
       );
     }
 }
 const mapStateToProps = ({ restart, score, icon }) => ({ restart, score, icon });
-const mapDispatchToProps = dispatch => ({
-  actions: bindActionCreators(Actioncreators, dispatch)
-});
+const mapDispatchToProps = dispatch => ({ actions: bindActionCreators(Actioncreators, dispatch) });
 export default connect(mapStateToProps, mapDispatchToProps)(Game2048);
