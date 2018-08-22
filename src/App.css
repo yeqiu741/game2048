@@ -5,8 +5,14 @@
   bottom: 0;
   width: 100%;
 }
+.advertise{
+  display: none;
+}
 @media screen and (max-width:415px){
   .game2048{
     width:100%;
+  }
+  .advertise{
+    display: inherit;
   }
 }

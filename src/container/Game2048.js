@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux';
 import Pane from '../components/Pane/Pane';
 import Tip from '../components/Tip/Tip';
 import * as Actioncreators from '../actions/restart';
-import SwitchKeys from '../components/SwitchKeys/SwitchKeys';
 
 
 class Game2048 extends Component {
@@ -15,38 +14,36 @@ class Game2048 extends Component {
   // 键盘字符 W S A D 的 ASCII 码分别对应为 87 83 65 68；
   /* eslint-disable no-param-reassign */
   componentDidMount() {
-    Game2048.prototype.touchOrKeypress = () => {
-      const gameContainer = document.getElementsByClassName('game2048')[0];
-      gameContainer.addEventListener('touchstart', e => {
-        e.preventDefault();
-        this.startX = e.touches[0].clientX;
-        this.startY = e.touches[0].clientY;
-      });
-      gameContainer.addEventListener('touchmove', e => {
-        e.preventDefault();
-      });
-      gameContainer.addEventListener('touchend', e => {
-        e.preventDefault();
-        const { actions } = this.props;
-        this.endX = e.changedTouches[0].clientX;
-        this.endY = e.changedTouches[0].clientY;
-        const x = this.endX - this.startX;
-        const y = this.endY - this.startY;
-        if ((Math.abs(x) > 3) || (Math.abs(y) > 3)) {
-          if (Math.abs(x) < Math.abs(y)) {
-            if (y > 0) {
-              this.down(actions);
-            } else {
-              this.up(actions);
-            }
-          } else if (x > 0) {
-            this.right(actions);
+    const gameContainer = document.getElementsByClassName('game2048')[0];
+    gameContainer.addEventListener('touchstart', e => {
+      e.preventDefault();
+      this.startX = e.touches[0].clientX;
+      this.startY = e.touches[0].clientY;
+    });
+    gameContainer.addEventListener('touchmove', e => {
+      e.preventDefault();
+    });
+    gameContainer.addEventListener('touchend', e => {
+      e.preventDefault();
+      const { actions } = this.props;
+      this.endX = e.changedTouches[0].clientX;
+      this.endY = e.changedTouches[0].clientY;
+      const x = this.endX - this.startX;
+      const y = this.endY - this.startY;
+      if ((Math.abs(x) > 3) || (Math.abs(y) > 3)) {
+        if (Math.abs(x) < Math.abs(y)) {
+          if (y > 0) {
+            this.down(actions);
           } else {
-            this.left(actions);
+            this.up(actions);
           }
+        } else if (x > 0) {
+          this.right(actions);
+        } else {
+          this.left(actions);
         }
-      });
-    };
+      }
+    });
     document.addEventListener('keydown', e => {
       const { actions } = this.props;
       switch (e.keyCode) {
@@ -71,29 +68,29 @@ class Game2048 extends Component {
       }
     });
   }
+  publicFunction = () => {
+    this.JudgeScore();
+    this.randomNumberInsertion();
+  }
   left = actions => {
     actions.addLastScore(0);
     actions.moveLeft(this.handlePressLeftKey());
-    this.JudgeScore();
-    this.randomNumberInsertion();
+    this.publicFunction();
   }
   right = actions => {
     actions.addLastScore(0);
     actions.moveRight(this.handlePressRightKey());
-    this.JudgeScore();
-    this.randomNumberInsertion();
+    this.publicFunction();
   }
   up = actions => {
     actions.addLastScore(0);
     actions.moveUp(this.handlePressUpKey());
-    this.JudgeScore();
-    this.randomNumberInsertion();
+    this.publicFunction();
   }
   down = actions => {
     actions.addLastScore(0);
     actions.moveDown(this.handlePressDownKey());
-    this.JudgeScore();
-    this.randomNumberInsertion();
+    this.publicFunction();
   }
   upTools = numberArray => {
     for (let i = 0; i < 3; i++) {
@@ -289,9 +286,7 @@ class Game2048 extends Component {
       }
     };
     render() {
-      const {
-        restart, score, icon, actions
-      } = this.props;
+      const { restart, score } = this.props;
       return (
         <div className="game2048">
           <Tip
@@ -299,14 +294,7 @@ class Game2048 extends Component {
             score={score}
           />
           <Pane number={restart} />
-          <SwitchKeys
-            up={this.up}
-            left={this.left}
-            right={this.right}
-            down={this.down}
-            icon={icon}
-            actions={actions}
-          />
+          <div className="advertise">广告位招商中，有意请联系qq:1428114973</div>
         </div>
       );
     }
