@@ -15,6 +15,38 @@ class Game2048 extends Component {
   // 键盘字符 W S A D 的 ASCII 码分别对应为 87 83 65 68；
   /* eslint-disable no-param-reassign */
   componentDidMount() {
+    Game2048.prototype.touchOrKeypress = () => {
+      const gameContainer = document.getElementsByClassName('game2048')[0];
+      gameContainer.addEventListener('touchstart', e => {
+        e.preventDefault();
+        this.startX = e.touches[0].clientX;
+        this.startY = e.touches[0].clientY;
+      });
+      gameContainer.addEventListener('touchmove', e => {
+        e.preventDefault();
+      });
+      gameContainer.addEventListener('touchend', e => {
+        e.preventDefault();
+        const { actions } = this.props;
+        this.endX = e.changedTouches[0].clientX;
+        this.endY = e.changedTouches[0].clientY;
+        const x = this.endX - this.startX;
+        const y = this.endY - this.startY;
+        if ((Math.abs(x) > 3) || (Math.abs(y) > 3)) {
+          if (Math.abs(x) < Math.abs(y)) {
+            if (y > 0) {
+              this.down(actions);
+            } else {
+              this.up(actions);
+            }
+          } else if (x > 0) {
+            this.right(actions);
+          } else {
+            this.left(actions);
+          }
+        }
+      });
+    };
     document.addEventListener('keydown', e => {
       const { actions } = this.props;
       switch (e.keyCode) {
