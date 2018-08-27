@@ -12,7 +12,7 @@ class Game2048 extends Component {
     this.initialization();
   }
   // 键盘字符 W S A D 的 ASCII 码分别对应为 87 83 65 68；
-  /* eslint-disable no-param-reassign */
+  /* eslint-disable no-param-reassign  */
   componentDidMount() {
     const gameContainer = document.getElementsByClassName('game2048')[0];
     gameContainer.addEventListener('touchstart', e => {
@@ -277,7 +277,7 @@ class Game2048 extends Component {
         }
       }
       if (count === 0 && bestNumber !== 2048) {
-        alert('Game over!Please press restart to have fun again!');
+        window.alert('Game over!Please press restart to have fun again!');
       } else {
         const number = siteArray.length;
         const oneRandNumber = Math.floor(Math.random() * number);
@@ -294,7 +294,6 @@ class Game2048 extends Component {
             score={score}
           />
           <Pane number={restart} />
-          <div className="advertise">广告位招商中，有意请联系qq:1428114973</div>
         </div>
       );
     }

@@ -49,7 +49,7 @@ export default class Tip extends Component {
             <div>
                 历史最高分<br />{score.bestScore}
             </div>
-            <button onClick={this.handleRestartClick}>重新开始</button>
+            <button onTouchEnd={this.handleRestartClick} onClick={this.handleRestartClick}>reStart</button>
           </div>
         </div>
       );
