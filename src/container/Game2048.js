@@ -14,6 +14,7 @@ class Game2048 extends Component {
   // 键盘字符 W S A D 的 ASCII 码分别对应为 87 83 65 68；
   /* eslint-disable no-param-reassign  */
   componentDidMount() {
+    window.alert('修复了手机模式下无法点击restart按钮的bug');
     const gameContainer = document.getElementsByClassName('game2048')[0];
     gameContainer.addEventListener('touchstart', e => {
       e.preventDefault();
